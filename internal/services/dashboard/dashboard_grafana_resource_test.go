@@ -160,7 +160,7 @@ resource "azurerm_dashboard_grafana" "test" {
   name                  = "a-dg-%d"
   resource_group_name   = azurerm_resource_group.test.name
   location              = azurerm_resource_group.test.location
-  grafana_major_version = "12"
+  grafana_major_version = "13"
 }
 `, template, data.RandomInteger)
 }
@@ -174,7 +174,7 @@ resource "azurerm_dashboard_grafana" "test" {
   name                  = "a-dg-%d"
   resource_group_name   = azurerm_resource_group.test.name
   location              = azurerm_resource_group.test.location
-  grafana_major_version = "11"
+  grafana_major_version = "12"
 
   sku = "Essential"
 }
@@ -190,7 +190,7 @@ resource "azurerm_dashboard_grafana" "test" {
   name                  = "a-dg-%d"
   resource_group_name   = azurerm_resource_group.test.name
   location              = azurerm_resource_group.test.location
-  grafana_major_version = "12"
+  grafana_major_version = "13"
 
   sku      = "Standard"
   sku_size = "X1"
@@ -207,7 +207,7 @@ resource "azurerm_dashboard_grafana" "import" {
   name                  = azurerm_dashboard_grafana.test.name
   resource_group_name   = azurerm_dashboard_grafana.test.resource_group_name
   location              = azurerm_dashboard_grafana.test.location
-  grafana_major_version = "12"
+  grafana_major_version = "13"
 }
 `, config)
 }
@@ -229,7 +229,7 @@ resource "azurerm_dashboard_grafana" "test" {
   api_key_enabled                   = true
   deterministic_outbound_ip_enabled = true
   public_network_access_enabled     = false
-  grafana_major_version             = "12"
+  grafana_major_version             = "13"
   smtp {
     enabled          = true
     host             = "localhost:25"
@@ -271,7 +271,7 @@ resource "azurerm_dashboard_grafana" "test" {
   name                  = "a-dg-%d"
   resource_group_name   = azurerm_resource_group.test.name
   location              = azurerm_resource_group.test.location
-  grafana_major_version = "12"
+  grafana_major_version = "13"
 
   identity {
     type = "SystemAssigned"
